@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>EVENT</h1>
+    <script>
+        document.querySelector('h1').addEventListener("click", function (){
+            alert("click")            
+        })
+        document.querySelector('h1').addEventListener("mouseover", (e) => {
+            e.target.style.fontSize = "50px"
+            e.target.style.border = "5px solid black"
+        })
+        document.querySelector('h1').addEventListener("mouseout", (e) => {
+            e.target.style.fontSize = "32px"
+            e.target.style.border = "none"
+        })
+    </script>
+</body>
+</html>

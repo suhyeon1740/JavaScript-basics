@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+
+        div {
+            border: 1px solid black;
+            padding: 20px;
+            margin: 10px;
+        }
+        section {
+            display: flex;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>구구단</h1>
+    <select id="startNumber"></select> ~ <select id="endNumber"></select>
+    <button>실행</button>
+    <section>
+        
+    </section>
+    <script>
+        function initSelect (id) {
+            for (var i = 2; i <= 19; i++) {
+                document.getElementById(id).innerHTML += `<option value = ${i}>${i}</option>`
+            }
+        }
+        initSelect("startNumber")
+        initSelect("endNumber")
+        document.querySelector('button').addEventListener('click', () => {
+            var startSelect = document.getElementById("startNumber")
+            var startNumber = +startSelect.options[startSelect.selectedIndex].value
+            var endSelect = document.getElementById("endNumber")
+            var endNumber = +endSelect.options[endSelect.selectedIndex].value            
+            document.querySelector('section').innerHTML = ""
+            for (var i = startNumber; i <= endNumber; i++) {
+                document.querySelector('section').innerHTML += "<div></div>"
+                for (var j = 1; j <= 9; j++) {
+                    document.querySelector('section div:last-child').innerHTML += `<p>${i} X ${j} = ${i * j}</p>`
+                }
+            }
+        })        
+    </script>
+</body>
+</html>

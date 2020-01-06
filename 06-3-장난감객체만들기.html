@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #display {
+            padding: 20px;
+            border: 1px solid gray;
+        }
+    </style>
+</head>
+<body>
+    <div id="display"></div>
+    <script>
+        var toyRobot = {
+            productId: "123-12",
+            name: "Robot",
+            price: "25,000",
+            madeIn: "Korea",
+            quantity: 10,
+            showStock: function() {
+                document.querySelector("#display").innerHTML = this.name + "제품은 " + this.quantity + "개 남아있습니다."
+            }
+            // 문제: 결과와 동일한 메서드만들기
+            // , showPrice: function() {
+            //     alert(this.name + " 제품의 가격은 " + this.price + "원 입니다.")
+            // }
+        }
+        toyRobot.showStock()
+    </script>
+</body>
+</html>

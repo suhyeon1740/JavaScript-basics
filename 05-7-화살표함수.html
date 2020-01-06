@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //1
+        var hi = function() {
+            return "hi"
+        }
+        alert(hi())
+
+        let hi2 = () => "hi"
+        alert(hi2())
+
+        //2
+        var greet = function(name) {
+            return name + ", hi"
+        }
+        alert(greet("aaa"))
+        
+        let greet2 = name => name + ", hi2"
+        alert(greet2("aaa"))
+
+        //3
+        var add = function(a,b) {
+            return a + b
+        }
+        alert(add(10, 20))
+
+        let add2 = (a, b) => a + b
+        alert(add2(10, 20))
+    </script>
+</body>
+</html>

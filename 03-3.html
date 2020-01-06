@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div {
+            display: inline-block;
+        }
+        #priceView {            
+            color: gray;
+            text-decoration: line-through;
+        }
+        #discountView {
+            font-size: 20px;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <p>
+        <label>원래 가격<input type="text" id="price">원</label>
+    </p>
+    <p>
+        <label>할인율<input type="text" id="rate">%</label>
+    </p>
+    <p>
+        <button>할인가격 계산하기</button>
+    </p>
+    <p>
+        <div id="priceView"></div>
+        <div id="discountView"></div>
+    </p>
+    <script>
+        document.querySelector('button').addEventListener('click',() => {
+            let price = document.getElementById("price").value
+            let rate = document.getElementById("rate").value
+            let result = price - price * rate/100
+            document.getElementById("priceView").innerHTML = price
+            document.getElementById("discountView").innerHTML = result
+        })
+    </script>
+</body>
+</html>

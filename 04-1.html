@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div {
+            border: 1px solid black;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <script>
+        let number = prompt("숫자를 입력하세요.")
+        let div = document.querySelector('div')
+        div.innerHTML = `${number}은 3의 배수가 `
+        if (!number) div.innerHTML = ""
+        else if (number % 3 === 0) div.innerHTML += "맞습니다."
+        else div.innerHTML += "아닙니다."
+    </script>
+</body>
+</html>

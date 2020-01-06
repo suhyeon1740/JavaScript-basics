@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>민들레</h1>
+    <button id="open">상세 설명 보기</button>
+    <div id="detail">        
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, beatae? Possimus ad, nisi soluta quae, eos necessitatibus asperiores totam cumque labore beatae architecto, velit assumenda consequuntur delectus officia ratione in.
+            Culpa facilis quisquam quo. Sunt earum cupiditate consequuntur! Rem reiciendis optio unde iure est, dolore sunt quia illo accusamus? Reprehenderit nemo provident voluptatum, totam qui commodi impedit nesciunt voluptatem expedita?
+            Tenetur ea saepe quisquam libero voluptatum possimus adipisci pariatur. Pariatur illum numquam, qui consequatur possimus provident. Sapiente aliquid repellat error expedita, architecto eveniet, soluta eligendi saepe, iusto impedit aut porro.
+            Quam similique quasi repudiandae a non voluptatum, quae corporis quidem vel minima? Facere, rerum nobis! Necessitatibus rerum cum voluptate ab, architecto laborum adipisci quasi soluta, laboriosam magnam possimus, fuga nostrum!
+            Labore magni excepturi cumque est, repellendus earum culpa consequuntur aspernatur cum voluptates hic nihil ullam nostrum ut accusamus doloribus quidem blanditiis! Cupiditate nostrum tempora incidunt a suscipit provident delectus aperiam.
+        </p>
+        <button id="close">상세 설명 닫기</button>
+    </div>
+    <script>
+        document.getElementById("detail").style.display = "none"
+        document.querySelector("#open").addEventListener("click", () => {
+            document.getElementById("detail").style.display = "block"
+            document.getElementById("open").style.display = "none"
+        })
+        document.getElementById("close").addEventListener("click", () => {
+            document.getElementById("detail").style.display = "none"
+            document.getElementById("open").style.display = "block"
+        })
+    </script>
+</body>
+</html>

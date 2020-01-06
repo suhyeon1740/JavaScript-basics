@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let session = prompt("관심 세션을 선택해 주세요. 1-마케팅, 2-개발, 3-디자인", "1")
+        let arr = ['마케팅', '개발', '디자인']
+        switch (session) {
+            case "1": case "2": case "3":
+                document.write(`${arr[session-1]} 세션은 ${session}01호 입니다.`)
+                break            
+            default:
+                alert("잘못 입력했습니다.")
+                break
+        }
+    </script>
+</body>
+</html>
