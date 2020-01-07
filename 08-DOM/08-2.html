@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #prod-img {
+            display: flex;
+            flex-direction: column;
+            float: left;
+            margin-right: 50px;            
+        }
+        img {
+            width: 100px;
+            height: 100px;            
+        }
+        #prod-img {
+            width: 320px;
+        }
+        #prod-img-big > img {
+            width: 100%;
+            height: 100%;
+        }
+        .fade-in {
+            animation-duration: 1s;
+            animation-name: fadein;
+        }
+        #prod-img-small {
+            display: flex;            
+            justify-content: space-between;
+        }   
+        @keyframes fadein {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }     
+        #detail {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h2>상품정보</h2>
+        <div id="prod-img">
+            <div id="prod-img-big">
+                <img src="images/coffee-pink.jpeg" class="big fade-in" alt="에티오피아 게뎁">
+            </div>
+            <div id="prod-img-small">
+                <img src="images/coffee-pink.jpeg" class="small" alt="에티오피아 게뎁">
+                <img src="images/coffee-blue.jpeg" class="small" alt="에티오피아 게뎁">
+                <img src="images/coffee-green.jpg" class="small" alt="에티오피아 게뎁">
+            </div>
+        </div>
+        <div>
+            <ul>
+                <li>원산지 : 에티오피아</li>
+                <li>지역 :</li>
+                <li>농장 :</li>
+                <li>고도 : </li>
+                <li>품종 : </li>
+                <li>가공법 :</li>
+            </ul>
+            <a href="#" id="detail-btn">상세설명보기</a>
+            <div id="detail">
+                <h3>상세 설명</h3>
+                <p>
+                    2차 세계대전 이후 설립된 게뎁 농장은 유기농 인증 농장으로 여성의 고용 창출과 지역사외 발전에 기여하며 3대째 이어져 내려오는 오랜 역사를 가진 농장입니다.
+                </p>
+                <h3>커피의 풍미</h3>
+                <p>은은하고 다채로운 꽃향, 망고, 다크 체리, 달달함이 입안 가득.</p>
+            </div>
+            
+        </div>
+        
+    </div>
+    <script>
+        var big = document.querySelector('.big')
+        var small = document.querySelectorAll(".small")
+
+        for( var i = 0; i < small.length; i++) {
+            small[i].onclick = showBig
+        }
+
+        function showBig() {
+            //big.src = this.src                  
+            big.setAttribute('src', this.getAttribute('src'))                  
+            big.classList.remove("fade-in")       
+            setTimeout(function () {                
+                big.classList.add("fade-in")             
+            }, 1);                                                           
+        }
+
+        document.querySelector('#detail-btn').onclick = function() {
+            var detail = document.querySelector("#detail")
+            if (detail.style.display ==  "block") {
+                document.querySelector('#detail-btn').innerText = "상세 내용 닫기"
+                detail.style.display = "none"
+            } else {
+                document.querySelector('#detail-btn').innerText = "상세 내용 보기"
+                detail.style.display = "block"
+            }
+        }
+    </script>
+</body>
+</html>
