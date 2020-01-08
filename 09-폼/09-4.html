@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" name="testForm">
+        <label for="class">학과</label>
+        <select name="major" id="" onchange="displaySelect()">
+            <option value="">학과선택</option>
+            <option value="">1</option>
+            <option value="">2</option>
+        </select>
+        
+        <legend>신청 과목</legend>
+        <p>이 달에 신청할 과목을 선택하세요</p>
+        <label><input type="radio" name="subject" id="">회화</label>
+        <label><input type="radio" name="subject" id="">문법</label>
+        <label><input type="radio" name="subject" id="">작문</label>
+        
+        <legend>메일링</legend>
+        <p>메일로 받고 싶은 뉴스 주제를 선택해주세요</p>
+        <label><input type="checkbox" name="mailing1" id="">해외 단신</label>
+        <label><input type="checkbox" name="mailing2" id="">5분 회화</label>
+        <label><input type="checkbox" name="mailing3" id="">모닝 팝스</label>
+    </form>
+    <script>
+        var selectMenu = document.testForm.major
+        function displaySelect() {
+            var selectedText = selectMenu.options[selectMenu.selectedIndex].innerText
+            alert(selectedText)
+        }
+    </script>
+</body>
+</html>

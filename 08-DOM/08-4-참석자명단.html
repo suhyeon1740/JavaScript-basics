@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="nameList">
+        <p>A <span class="del">X</span></p>
+        <p>B <span class="del">X</span></p>
+        <p>C <span class="del">X</span></p>
+    </div>
+    <script>
+        var nameList = document.getElementById("nameList")
+        nameList.insertBefore(nameList.children[2], nameList.children[0])
+
+        document.querySelectorAll("p")[0].removeChild(document.querySelectorAll(".del")[0])
+    </script>
+</body>
+</html>
