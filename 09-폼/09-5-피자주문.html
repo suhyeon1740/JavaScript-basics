@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>피자 주문</h1>
+    <fieldset>
+        <legend>사이즈</legend>
+        <p>
+            <label><input type="radio" name="size" id="" value=24000 checked>Large: 24000원</label>
+            <label><input type="radio" name="size" id="" value=20000>Medium: 20000원</label>
+        </p>
+    </fieldset>
+    <fieldset>
+        <legend>추가 주문</legend>
+        <ul>
+            <li>
+                <label><input type="checkbox" name="" id="" value="800">피클: 800원</label>
+            </li>
+            <li>
+                <label><input type="checkbox" name="" id="" value="300">칠리소스: 300원</label>
+            </li>
+            <li>
+                <label><input type="checkbox" name="" id="" value="4000">치즈스틱(4개): 4000원</label>
+            </li>
+            <li>
+                <label><input type="checkbox" name="" id="" value="2400">콘 샐러드: 2400원</label>
+            </li>            
+        </ul>
+    </fieldset>
+    <fieldset>
+        <legend>합계</legend>
+        <p id="total"></p>
+    </fieldset>
+    <script src="09-5.js"></script>
+</body>
+</html>
