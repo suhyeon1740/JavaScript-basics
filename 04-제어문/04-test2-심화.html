@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>3의 배수 찾기</h1>
+    <input type="number" placeholder="숫자를 입력하세요">
+    <input type="button" value="확인">
+    <div id="result"></div>
+    <script>
+        document.querySelector('input[type=button]').onclick = () => {
+            var sum = 0
+            var number = document.querySelector('input[type=number]').value
+            for (var i = 3; i <= number; i++) {
+                if (i % 3 !== 0) continue                
+                sum++
+            }
+            document.getElementById("result").innerText =`3의 배수의 개수: ${sum}`
+        }        
+    </script>
+</body>
+</html>
